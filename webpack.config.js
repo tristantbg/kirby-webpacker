@@ -50,7 +50,7 @@ const config = {
     final: projectPath + '/src/js/app.js'
   },
   output: {
-    path: projectPath + 'www/assets/js/build/',
+    path: projectPath + '/www/assets/js/build/',
     filename: 'app.min.js'
   },
   plugins: [
