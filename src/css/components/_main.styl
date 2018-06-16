@@ -49,12 +49,21 @@ a, a:hover, a:visited, a:focus
 	text-decoration none
 	cursor pointer
 
-.lazy, .plyr
+.lazy
 	transition opacity 300ms ease
 	opacity 0
 
-.lazy.lazyloaded, .lazy.flickity-lazyloaded, .plyr.plyr--ready
+.lazy.lazyloaded, .lazy.flickity-lazyloaded
 	opacity 1
+
+.responsive-image
+	hideselect()
+	position relative
+	overflow hidden
+	img
+		position absolute
+		top 0
+		left 0
 
 #main
 	span(1)
