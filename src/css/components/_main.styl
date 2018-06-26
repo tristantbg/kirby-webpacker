@@ -1,31 +1,6 @@
-// webfont("","")
-
 body,html
 	width 100%
-	-webkit-text-size-adjust 100%
 	background $primary
-
-html
-	font-size 10px
-
-body
-	font-family Helvetica Neue, Arial, sans-serif
-	font-size 1rem
-	text-rendering optimizeLegibility
-	font-smoothing()
-
-p
-	margin-bottom 1em
-	line-height 1
-
-p:last-child
-	margin-bottom 0
-
-::selection
-	background $secondary
-	
-::-moz-selection
-	background $secondary
 
 *
 	hideselect()
@@ -65,10 +40,7 @@ a, a:hover, a:visited, a:focus
 		top 0
 		left 0
 
-#main
-	span(1)
-
-#container
+#main, #container, #page-content
 	span(1)
 
 body.is-loading
