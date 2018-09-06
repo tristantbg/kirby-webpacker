@@ -4,6 +4,7 @@ yarn.lock
 yarn-error.log
 www/content/*
 /lib
+www/assets/build/*
 www/assets/fonts/*
 www/assets/css/app.min.css
 www/assets/css/build/*
