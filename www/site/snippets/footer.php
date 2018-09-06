@@ -6,7 +6,7 @@
 
 <?php if($site->googleanalytics()->isNotEmpty()): ?>
 	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-115150448-2"></script>
+	<script async src="https://www.googletagmanager.com/gtag/js?id=<?= $site->googleanalytics() ?>"></script>
 	<script>
 		window.dataLayer = window.dataLayer || [];
 		function gtag(){dataLayer.push(arguments);}
