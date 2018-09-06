@@ -5,6 +5,7 @@ yarn-error.log
 www/content/*
 /lib
 www/assets/fonts/*
+www/assets/build
 www/assets/css/app.min.css
 www/assets/css/build/*
 www/assets/js/app.concat.js
