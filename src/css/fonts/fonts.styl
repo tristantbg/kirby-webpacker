@@ -1,7 +1,7 @@
-// webfont('NH', 'NHaasGroteskTXPro55Rg')
+// webfont('Genath', 'GenathRegular')
 
 text()
-	font-family Helvetica Neue, Arial, sans-serif
+	font-family Genath, Times New Roman, serif
 
 // Main font styles
 
@@ -15,13 +15,13 @@ body,html
 	-webkit-text-size-adjust 100%
 
 html
-	font-size 1vw
+	font-size 16px
 	+below($md)
 		font-size 12px
 
 body
 	text()
-	font-size 1rem
+	font-size $normal
 	line-height 1
 	// text-rendering optimizeLegibility
 	font-smoothing()
@@ -36,3 +36,9 @@ p
 
 .text-center
 	text-align center
+
+nav#menu a, #project-description, #about-description
+	line-height 1.2
+
+#project-medias .caption, #contact, #credits, #right-nav
+	font-size $normal

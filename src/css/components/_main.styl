@@ -1,6 +1,5 @@
-body,html
-	width 100%
-	background $primary
+body, html
+	span(1)
 
 *
 	hideselect()
@@ -24,8 +23,11 @@ a, a:hover, a:visited, a:focus
 	text-decoration none
 	cursor pointer
 
+.hidden
+	display none
+
 .lazy
-	transition opacity 300ms ease
+	transition opacity 100ms ease
 	opacity 0
 
 .lazy.lazyloaded, .lazy.flickity-lazyloaded
@@ -43,7 +45,14 @@ a, a:hover, a:visited, a:focus
 #main, #container, #page-content
 	span(1)
 
+#container
+	span(8/12, $offset: 3/12)
+	padding $space
+	padding-top ($space + $normal * 2)
+	font-size $medium
+
 body.is-loading
 	#page-content
 		opacity 0
 		transition opacity 100ms ease
+

@@ -29,6 +29,7 @@ of the system, please check out http://getkirby.com/docs/advanced/options
 
 */
 
+c::set('environnement', 'dev');
 c::set('debug', true);
 c::set('autobuster', true);
 c::set('plugin.embed.video.lazyload', true);
