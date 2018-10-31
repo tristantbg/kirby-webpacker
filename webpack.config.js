@@ -1,4 +1,4 @@
-const stylusLoder = require('stylus-loader');
+const stylusLoader = require('stylus-loader');
 const nib = require('nib');
 const rupture = require('rupture');
 const webpack = require('webpack');
@@ -8,6 +8,7 @@ const path = require('path');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 const ModernizrWebpackPlugin = require('modernizr-webpack-plugin');
+const SvgStore = require('webpack-svgstore-plugin');
 
 const modernizrConfig = {
   filename: 'vendor/modernizr-bundle.js',
@@ -27,7 +28,7 @@ const modernizrConfig = {
     "css/flexbox",
     // "css/hyphens",
     // "css/mask",
-    "css/positionsticky",
+    // "css/positionsticky",
     // "css/scrollbars",
     "css/transforms",
     "css/transforms3d",
@@ -36,7 +37,7 @@ const modernizrConfig = {
     // "css/vwunit",
     // "img/srcset",
     // "img/webp",
-    // "storage/localstorage",
+    "storage/localstorage",
     // "storage/sessionstorage"
   ],
   minify: {
@@ -67,6 +68,14 @@ module.exports = {
         }
       }
     }),
+    new SvgStore({
+      svgoOptions: {
+        plugins: [
+          { removeTitle: true }
+        ]
+      },
+      prefix: ''
+    }),
     new ModernizrWebpackPlugin(modernizrConfig)
   ],
   module: {
@@ -81,7 +90,11 @@ module.exports = {
         use: [MiniCssExtractPlugin.loader, 'css-loader', 'stylus-loader']
       },
       {
-        test: /\.(woff|eot|ttf)$/,
+        test: /\.scss$/,
+        use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader']
+      },
+      {
+        test: /\.(woff|woff2|eot|ttf)$/,
         use: { loader: "url-loader" }
       },
       {
