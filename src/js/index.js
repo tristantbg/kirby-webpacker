@@ -1,4 +1,4 @@
-import LazySizes from "./components/lazysizes";
+import LazySizes from './components/lazysizes';
 import Loader from './components/loader';
 import Links from './components/links';
 import Embeds from './components/embeds';
